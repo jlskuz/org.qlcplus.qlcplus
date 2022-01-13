@@ -1,0 +1,486 @@
+
+
+diff --git a/engine/test/bus/bus.pro b/engine/test/bus/bus.pro
+index 06d63d3f1..6d341ae06 100644
+--- a/engine/test/bus/bus.pro
++++ b/engine/test/bus/bus.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += bus_test.cpp
+ HEADERS += bus_test.h
+diff --git a/engine/test/chaser/chaser.pro b/engine/test/chaser/chaser.pro
+index e8c7caf84..ad335d784 100644
+--- a/engine/test/chaser/chaser.pro
++++ b/engine/test/chaser/chaser.pro
+@@ -12,7 +12,7 @@ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../mastertimer
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += chaser_test.cpp ../mastertimer/mastertimer_stub.cpp
+ HEADERS += chaser_test.h ../mastertimer/mastertimer_stub.h ../common/resource_paths.h
+diff --git a/engine/test/chaserrunner/chaserrunner.pro b/engine/test/chaserrunner/chaserrunner.pro
+index be15e1e4f..12aafca9e 100644
+--- a/engine/test/chaserrunner/chaserrunner.pro
++++ b/engine/test/chaserrunner/chaserrunner.pro
+@@ -12,7 +12,7 @@ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../mastertimer
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += chaserrunner_test.cpp ../mastertimer/mastertimer_stub.cpp
+ HEADERS += chaserrunner_test.h ../mastertimer/mastertimer_stub.h ../common/resource_paths.h
+diff --git a/engine/test/chaserstep/chaserstep.pro b/engine/test/chaserstep/chaserstep.pro
+index 63606b28d..88dd850cb 100644
+--- a/engine/test/chaserstep/chaserstep.pro
++++ b/engine/test/chaserstep/chaserstep.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += chaserstep_test.cpp
+ HEADERS += chaserstep_test.h
+diff --git a/engine/test/collection/collection.pro b/engine/test/collection/collection.pro
+index d9b0ddb1b..77cba9b1b 100644
+--- a/engine/test/collection/collection.pro
++++ b/engine/test/collection/collection.pro
+@@ -12,7 +12,7 @@ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ INCLUDEPATH  += ../mastertimer
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += collection_test.cpp ../mastertimer/mastertimer_stub.cpp
+ HEADERS += collection_test.h ../mastertimer/mastertimer_stub.h
+diff --git a/engine/test/cue/cue.pro b/engine/test/cue/cue.pro
+index 235cddc1c..9cd40a7b7 100644
+--- a/engine/test/cue/cue.pro
++++ b/engine/test/cue/cue.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += cue_test.cpp
+ HEADERS += cue_test.h
+diff --git a/engine/test/cuestack/cuestack.pro b/engine/test/cuestack/cuestack.pro
+index a0477125b..55e27cbd8 100644
+--- a/engine/test/cuestack/cuestack.pro
++++ b/engine/test/cuestack/cuestack.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += cuestack_test.cpp
+ HEADERS += cuestack_test.h ../common/resource_paths.h
+diff --git a/engine/test/doc/doc.pro b/engine/test/doc/doc.pro
+index fe0605269..3cc22826a 100644
+--- a/engine/test/doc/doc.pro
++++ b/engine/test/doc/doc.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += doc_test.cpp
+ HEADERS += doc_test.h ../common/resource_paths.h
+diff --git a/engine/test/efx/efx.pro b/engine/test/efx/efx.pro
+index c58ee5afd..0b0950347 100644
+--- a/engine/test/efx/efx.pro
++++ b/engine/test/efx/efx.pro
+@@ -12,7 +12,7 @@ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../mastertimer
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += efx_test.cpp ../mastertimer/mastertimer_stub.cpp
+ HEADERS += efx_test.h ../mastertimer/mastertimer_stub.h ../common/resource_paths.h
+diff --git a/engine/test/efxfixture/efxfixture.pro b/engine/test/efxfixture/efxfixture.pro
+index 822a65847..a3ef9804a 100644
+--- a/engine/test/efxfixture/efxfixture.pro
++++ b/engine/test/efxfixture/efxfixture.pro
+@@ -12,7 +12,7 @@ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../mastertimer
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += efxfixture_test.cpp ../mastertimer/mastertimer_stub.cpp
+ HEADERS += efxfixture_test.h ../mastertimer/mastertimer_stub.h ../common/resource_paths.h
+diff --git a/engine/test/fadechannel/fadechannel.pro b/engine/test/fadechannel/fadechannel.pro
+index a1ff0232c..130523f1e 100644
+--- a/engine/test/fadechannel/fadechannel.pro
++++ b/engine/test/fadechannel/fadechannel.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += fadechannel_test.cpp
+ HEADERS += fadechannel_test.h ../common/resource_paths.h
+diff --git a/engine/test/fixture/fixture.pro b/engine/test/fixture/fixture.pro
+index 4f7f1eb3f..cd06174fd 100644
+--- a/engine/test/fixture/fixture.pro
++++ b/engine/test/fixture/fixture.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += fixture_test.cpp
+ HEADERS += fixture_test.h ../common/resource_paths.h
+diff --git a/engine/test/fixturegroup/fixturegroup.pro b/engine/test/fixturegroup/fixturegroup.pro
+index f124fbf94..e6855e8de 100644
+--- a/engine/test/fixturegroup/fixturegroup.pro
++++ b/engine/test/fixturegroup/fixturegroup.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += fixturegroup_test.cpp
+ HEADERS += fixturegroup_test.h ../common/resource_paths.h
+diff --git a/engine/test/function/function.pro b/engine/test/function/function.pro
+index 9a62ce454..2908a1dcb 100644
+--- a/engine/test/function/function.pro
++++ b/engine/test/function/function.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += function_test.cpp function_stub.cpp
+ HEADERS += function_test.h function_stub.h
+diff --git a/engine/test/genericfader/genericfader.pro b/engine/test/genericfader/genericfader.pro
+index b58076842..5c9e13fc6 100644
+--- a/engine/test/genericfader/genericfader.pro
++++ b/engine/test/genericfader/genericfader.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += genericfader_test.cpp
+ HEADERS += genericfader_test.h ../common/resource_paths.h
+diff --git a/engine/test/grandmaster/grandmaster.pro b/engine/test/grandmaster/grandmaster.pro
+index 67f77bf84..11cbe1073 100644
+--- a/engine/test/grandmaster/grandmaster.pro
++++ b/engine/test/grandmaster/grandmaster.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += grandmaster_test.cpp
+ HEADERS += grandmaster_test.h
+diff --git a/engine/test/inputoutputmap/inputoutputmap.pro b/engine/test/inputoutputmap/inputoutputmap.pro
+index 3e9a55856..9e60b437a 100644
+--- a/engine/test/inputoutputmap/inputoutputmap.pro
++++ b/engine/test/inputoutputmap/inputoutputmap.pro
+@@ -12,7 +12,7 @@ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ INCLUDEPATH  += ../iopluginstub
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ IS_TRAVIS = $$(TRAVIS)
+ contains(IS_TRAVIS, "true") {
+diff --git a/engine/test/inputpatch/inputpatch.pro b/engine/test/inputpatch/inputpatch.pro
+index 26b423e0c..1d6f6029f 100644
+--- a/engine/test/inputpatch/inputpatch.pro
++++ b/engine/test/inputpatch/inputpatch.pro
+@@ -12,7 +12,7 @@ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ INCLUDEPATH  += ../iopluginstub
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += inputpatch_test.cpp
+ HEADERS += inputpatch_test.h
+diff --git a/engine/test/keypadparser/keypadparser.pro b/engine/test/keypadparser/keypadparser.pro
+index b18ae757a..77bde3b8b 100644
+--- a/engine/test/keypadparser/keypadparser.pro
++++ b/engine/test/keypadparser/keypadparser.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += keypadparser_test.cpp
+ HEADERS += keypadparser_test.h
+diff --git a/engine/test/mastertimer/mastertimer.pro b/engine/test/mastertimer/mastertimer.pro
+index 6e3f6faed..07b58aebd 100644
+--- a/engine/test/mastertimer/mastertimer.pro
++++ b/engine/test/mastertimer/mastertimer.pro
+@@ -12,7 +12,7 @@ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../function
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ IS_TRAVIS = $$(TRAVIS)
+ contains(IS_TRAVIS, "true") {
+diff --git a/engine/test/outputpatch/outputpatch.pro b/engine/test/outputpatch/outputpatch.pro
+index 6158d1cb0..0733229a3 100644
+--- a/engine/test/outputpatch/outputpatch.pro
++++ b/engine/test/outputpatch/outputpatch.pro
+@@ -12,7 +12,7 @@ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ INCLUDEPATH  += ../iopluginstub
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += outputpatch_test.cpp
+ HEADERS += outputpatch_test.h
+diff --git a/engine/test/qlccapability/qlccapability.pro b/engine/test/qlccapability/qlccapability.pro
+index 876b5f8f1..b8f51b35b 100644
+--- a/engine/test/qlccapability/qlccapability.pro
++++ b/engine/test/qlccapability/qlccapability.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += qlccapability_test.cpp
+ HEADERS += qlccapability_test.h
+diff --git a/engine/test/qlcchannel/qlcchannel.pro b/engine/test/qlcchannel/qlcchannel.pro
+index a9a3849f4..21bfd3a01 100644
+--- a/engine/test/qlcchannel/qlcchannel.pro
++++ b/engine/test/qlcchannel/qlcchannel.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += qlcchannel_test.cpp
+ HEADERS += qlcchannel_test.h
+diff --git a/engine/test/qlcfile/qlcfile.pro b/engine/test/qlcfile/qlcfile.pro
+index 4cebd635d..4877b26b0 100644
+--- a/engine/test/qlcfile/qlcfile.pro
++++ b/engine/test/qlcfile/qlcfile.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += qlcfile_test.cpp
+ HEADERS += qlcfile_test.h
+diff --git a/engine/test/qlcfixturedef/qlcfixturedef.pro b/engine/test/qlcfixturedef/qlcfixturedef.pro
+index fb9bbdaea..8d7c52341 100644
+--- a/engine/test/qlcfixturedef/qlcfixturedef.pro
++++ b/engine/test/qlcfixturedef/qlcfixturedef.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ SOURCES += qlcfixturedef_test.cpp
+ HEADERS += qlcfixturedef_test.h
+diff --git a/engine/test/qlcfixturedefcache/qlcfixturedefcache.pro b/engine/test/qlcfixturedefcache/qlcfixturedefcache.pro
+index 0c2d4352d..b9588bc02 100644
+--- a/engine/test/qlcfixturedefcache/qlcfixturedefcache.pro
++++ b/engine/test/qlcfixturedefcache/qlcfixturedefcache.pro
+@@ -11,7 +11,7 @@ DEPENDPATH   += ../../src
+ INCLUDEPATH  += ../../../plugins/interfaces
+ INCLUDEPATH  += ../../src
+ QMAKE_LIBDIR += ../../src
+-LIBS         += -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusengine
+ 
+ IS_TRAVIS = $$(TRAVIS)
+ contains(IS_TRAVIS, "true") {
+diff --git a/fixtureeditor/fixtureeditor.pro b/fixtureeditor/fixtureeditor.pro
+index 7c31a9d6f..8d7e1dd05 100644
+--- a/fixtureeditor/fixtureeditor.pro
++++ b/fixtureeditor/fixtureeditor.pro
+@@ -16,7 +16,7 @@ DEPENDPATH  += ../engine/src
+ INCLUDEPATH += ../ui/src
+ DEPENDPATH  += ../ui/src
+ QMAKE_LIBDIR += ../engine/src
+-LIBS    += -lqlcplusengine
++LIBS    += -L/app/lib -lqlcplusengine
+ 
+ # Sources
+ RESOURCES    += ../ui/src/qlcui.qrc
+diff --git a/main/main.pro b/main/main.pro
+index 316013a78..cb4e149ab 100644
+--- a/main/main.pro
++++ b/main/main.pro
+@@ -11,9 +11,9 @@ INCLUDEPATH  += ../webaccess/src
+ QMAKE_LIBDIR += ../ui/src
+ QMAKE_LIBDIR += ../engine/src
+ QMAKE_LIBDIR += ../webaccess/src
+-LIBS         += -lqlcplusengine
+-LIBS         += -lqlcplusui
+-LIBS         += -lqlcpluswebaccess
++LIBS         += -L/app/lib -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusui
++LIBS         += -L/app/lib -lqlcpluswebaccess
+ 
+ win32:HEADERS += ../ui/src/debugbox.h
+ macx:HEADERS += ../ui/src/debugbox.h
+diff --git a/qlc.pro b/qlc.pro
+index 599f66dbf..e8326462d 100644
+--- a/qlc.pro
++++ b/qlc.pro
+@@ -18,6 +18,7 @@ qmlui: {
+ }
+ SUBDIRS        += resources
+ SUBDIRS        += plugins
++LIBS           += -L/app/lib
+ 
+ unix:!macx:DEBIAN_CLEAN    += debian/*.substvars debian/*.log debian/*.debhelper
+ unix:!macx:DEBIAN_CLEAN    += debian/files debian/dirs
+diff --git a/qmlui/qmlui.pro b/qmlui/qmlui.pro
+index a65d267ad..d810fbd0f 100644
+--- a/qmlui/qmlui.pro
++++ b/qmlui/qmlui.pro
+@@ -22,7 +22,7 @@ INCLUDEPATH     += tardis
+ INCLUDEPATH     += ../plugins/interfaces
+ DEPENDPATH      += ../engine/src
+ QMAKE_LIBDIR    += ../engine/src
+-LIBS            += -lqlcplusengine
++LIBS            += -L/app/lib -lqlcplusengine
+ #win32:QMAKE_LFLAGS += -shared
+ win32:RC_FILE = qmlui.rc
+ 
+diff --git a/ui/src/src.pro b/ui/src/src.pro
+index 587063200..9bcfec9f0 100644
+--- a/ui/src/src.pro
++++ b/ui/src/src.pro
+@@ -16,7 +16,7 @@ INCLUDEPATH     += ../../engine/src ../../engine/audio/src
+ win32: INCLUDEPATH += ../../hotplugmonitor/src
+ DEPENDPATH      += ../../engine/src
+ QMAKE_LIBDIR    += ../../engine/src
+-LIBS            += -lqlcplusengine
++LIBS            += -L/app/lib -lqlcplusengine
+ win32:QMAKE_LFLAGS += -shared
+ 
+ # Types
+diff --git a/ui/test/aboutbox/aboutbox.pro b/ui/test/aboutbox/aboutbox.pro
+index 66eb7672d..b56dee2f2 100644
+--- a/ui/test/aboutbox/aboutbox.pro
++++ b/ui/test/aboutbox/aboutbox.pro
+@@ -13,7 +13,7 @@ DEPENDPATH  += ../../src
+ 
+ QMAKE_LIBDIR += ../../src
+ QMAKE_LIBDIR += ../../../engine/src
+-LIBS         += -lqlcplusui -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusui -lqlcplusengine
+ 
+ # Test sources
+ SOURCES += aboutbox_test.cpp
+diff --git a/ui/test/addfixture/addfixture.pro b/ui/test/addfixture/addfixture.pro
+index ec67200e5..0a309d921 100644
+--- a/ui/test/addfixture/addfixture.pro
++++ b/ui/test/addfixture/addfixture.pro
+@@ -13,7 +13,7 @@ DEPENDPATH  += ../../src
+ 
+ QMAKE_LIBDIR += ../../src
+ QMAKE_LIBDIR += ../../../engine/src
+-LIBS         += -lqlcplusui -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusui -lqlcplusengine
+ 
+ # Test sources
+ SOURCES += addfixture_test.cpp
+diff --git a/ui/test/assignhotkey/assignhotkey.pro b/ui/test/assignhotkey/assignhotkey.pro
+index 48c7a9477..ae694d7b0 100644
+--- a/ui/test/assignhotkey/assignhotkey.pro
++++ b/ui/test/assignhotkey/assignhotkey.pro
+@@ -14,7 +14,7 @@ DEPENDPATH  += ../../src
+ 
+ QMAKE_LIBDIR += ../../../engine/src
+ QMAKE_LIBDIR += ../../src
+-LIBS        += -lqlcplusengine -lqlcplusui
++LIBS        += -L/app/lib -lqlcplusengine -lqlcplusui
+ 
+ # Test sources
+ SOURCES += assignhotkey_test.cpp
+diff --git a/ui/test/efxpreviewarea/efxpreviewarea.pro b/ui/test/efxpreviewarea/efxpreviewarea.pro
+index e242e5bcc..db1995c71 100644
+--- a/ui/test/efxpreviewarea/efxpreviewarea.pro
++++ b/ui/test/efxpreviewarea/efxpreviewarea.pro
+@@ -13,7 +13,7 @@ DEPENDPATH  += ../../src
+ 
+ QMAKE_LIBDIR += ../../src
+ QMAKE_LIBDIR += ../../../engine/src
+-LIBS         += -lqlcplusui -lqlcplusengine
++LIBS         += -L/app/lib -lqlcplusui -lqlcplusengine
+ 
+ # Test sources
+ SOURCES += efxpreviewarea_test.cpp
+diff --git a/variables.pri b/variables.pri
+index 5ea1166ab..185f799a3 100644
+--- a/variables.pri
++++ b/variables.pri
+@@ -78,7 +78,7 @@ win32:QMAKE_LFLAGS += -Wl,--enable-auto-import
+ # Install root
+ win32:INSTALLROOT       = $$(SystemDrive)/qlcplus
+ macx:INSTALLROOT        = ~/QLC+.app/Contents
+-unix:!macx:INSTALLROOT += /usr
++unix:!macx:INSTALLROOT += /app
+ android:INSTALLROOT     = /
+ ios:INSTALLROOT         = /
+ 
+diff --git a/webaccess/src/src.pro b/webaccess/src/src.pro
+index 5082d3a86..0c6b601fa 100644
+--- a/webaccess/src/src.pro
++++ b/webaccess/src/src.pro
+@@ -25,7 +25,7 @@ lessThan(QT_MAJOR_VERSION, 5) {
+   }
+ }
+ 
+-LIBS += -lqlcplusengine -lqlcplusui
++LIBS += -L/app/lib -L/app/lib -lqlcplusengine -lqlcplusui
+ 
+ win32:LIBS  += -lws2_32
+ win32:QMAKE_LFLAGS += -shared

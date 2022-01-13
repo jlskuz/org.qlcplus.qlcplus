@@ -1,0 +1,72 @@
+{
+  "app-id": "org.qlcplus.qlcplus",
+  "default-branch": "stable",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "5.15-21.08",
+  "sdk": "org.kde.Sdk",
+  "sdk-extensions" : [ "org.freedesktop.Sdk.Extension.llvm12" ],
+  "command": "qlcplus-qml",
+  "finish-args": [
+    "--require-version=0.11.4",
+    "--share=ipc",
+    "--socket=x11",
+    "--device=all",
+    "--socket=pulseaudio",
+    "--share=network",
+    "--filesystem=host",
+    "--env=TMPDIR=/var/tmp",
+    "--env=QT_ENABLE_HIGHDPI_SCALING=1",
+    "--env=XDG_CURRENT_DESKTOP=kde"
+  ],
+  "modules": [
+    {
+      "name": "libudev-dev"
+    },
+    {
+      "name": "libmad0-dev"
+    },
+    {
+      "name": "libsndfile1-dev"
+    },
+    {
+      "name": "libfftw3-dev"
+    },
+    {
+      "name": "libftdi-dev"
+    },
+    {
+      "name": "pkg-config"
+    },
+    {
+      "name": "libasound"
+    },
+    {
+      "name": "libasound-dev"
+    },
+    {
+      "name": "libftdi-dev"
+    },
+    {
+      "name": "qlcplus",
+      "buildsystem": "qmake",
+      "config-opts": [
+        "CONFIG+=qmlui",
+        "QMAKE_LIBDIR=/app/lib"
+        ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/mcallegari/qlcplus.git"
+        },
+        {
+          "type": "patch",
+          "path": "disable-plugins.diff"
+        },
+        {
+          "type": "patch",
+          "path": "flatpak-paths.diff"
+        }
+      ]
+    }
+  ]
+}
